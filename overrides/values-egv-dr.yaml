@@ -1,5 +1,5 @@
 ---
-disableExternalSecrets: true
+disableExternalSecrets: false
 waitForMetalNode: false
 
 vmDefaults:
@@ -30,8 +30,12 @@ vmDefaults:
       port: 22
       protocol: TCP
       targetPort: 22
+    - name: redis
+      port: 6379
+      protocol: TCP
+      targetPort: 6379
 
 vms:
-  edgenode:
-    count: 4
-    role: node
+  redis:
+    count: 1
+    role: redis
