@@ -40,3 +40,10 @@ vms:
   redis:
     count: 1
     role: redis
+
+boutique:
+  deploy: true
+
+redis:
+  external:
+    enabled: true
