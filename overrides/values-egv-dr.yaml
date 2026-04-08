@@ -45,7 +45,7 @@ vms:
     count: 1
     role: desktop
     os: windows
-    dataVolume: windows2k22
+    dataSource: windows2k22
     efi: true
     mainDiskStorageBus: sata
     #machineType: "pc-q35-9.2"
