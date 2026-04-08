@@ -44,7 +44,7 @@ vms:
   desktop:
     count: 1
     role: desktop
-    os: windows
+    os: windows2k22
     dataSource: windows2k22
     efi: true
     mainDiskStorageBus: sata
