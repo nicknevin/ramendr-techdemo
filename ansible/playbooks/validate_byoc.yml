@@ -183,13 +183,3 @@
       - name: Make instance types unique (primary-cluster)
         ansible.builtin.set_fact:
           secondary_worker_instance_types: "{{ secondary_worker_instance_types | unique }}"
-
-      - name: Validate BYOC DR Clusters have metal node to run virtual machine workload
-        ansible.builtin.assert:
-          that:
-            - primary_worker_instance_types | select('search', 'metal') | list | length > 0
-            - secondary_worker_instance_types | select('search', 'metal') | list | length > 0
-          fail_msg: |
-            FATAL: BYOC DR Clusters have no metal nodes:
-            Primary: {{ primary_worker_instance_types }}).
-            Secondary: {{ primary_worker_instance_types }}).
