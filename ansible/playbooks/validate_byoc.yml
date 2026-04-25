@@ -12,7 +12,7 @@
     byoc_enabled: true
   tasks:
     - name: Parse secrets data
-      no_log: "{{ hide_sensitive_output | default(true) }}"
+      no_log: false
       rhvp.cluster_utils.parse_secrets_info:
         values_secrets_plaintext: "{{ values_secrets_data }}"
         secrets_backing_store: "{{ secrets_backing_store | default('vault') }}"

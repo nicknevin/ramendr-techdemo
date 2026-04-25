@@ -9,4 +9,4 @@ install-byoc: ramen-prereq pattern-install ## Installs the pattern onto a cluste
 .PHONY: ramen-prereq
 ramen-prereq: ## Check if values.byoc false do nothing, else run the precheck agains clusters accessed from values-secrets
 	echo "Running precheck for ramendr"
-	cd ansible && ansible-playbook -i hosts $(EXTRA_ARGS) $(EXTRA_VARS) playbooks/validate_byoc.yml
+	cd ansible && ansible-playbook -i hosts $(EXTRA_ARGS) $(EXTRA_VARS) -vvv playbooks/validate_byoc.yml

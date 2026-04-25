@@ -26,7 +26,7 @@ uninstall:
 
 .PHONY: pattern-install
 pattern-install:
-	@$(ANSIBLE_RUN) rhvp.cluster_utils.install
+	@$(ANSIBLE_RUN) -vvv rhvp.cluster_utils.install
 
 .PHONY: load-secrets
 load-secrets: ## Loads secrets onto the cluster (unless explicitly disabled in values-global.yaml)
@@ -35,7 +35,7 @@ load-secrets: ## Loads secrets onto the cluster (unless explicitly disabled in v
 ##@ Validation Tasks
 .PHONY: validate-prereq
 validate-prereq: ## verify pre-requisites
-	@$(ANSIBLE_RUN) rhvp.cluster_utils.validate_prereq
+	@$(ANSIBLE_RUN) -vvv rhvp.cluster_utils.validate_prereq
 
 .PHONY: validate-origin
 validate-origin: ## verify the git origin is available
