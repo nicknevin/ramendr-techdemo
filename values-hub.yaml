@@ -130,8 +130,8 @@ clusterGroup:
       name: regional-dr
       namespace: regional-dr
       project: opp
-      repoURL: https://github.com/validatedpatterns/regionaldr-with-virt-chart.git
-      chartVersion: main
+      repoURL: https://github.com/nicknevin/regionaldr-with-virt-chart.git
+      chartVersion: byoc-lite
       path: "."
       annotations:
         argocd.argoproj.io/sync-wave: "10"
